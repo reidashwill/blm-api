@@ -1,9 +1,11 @@
 class QuotesController < ApplicationController
 
   def index 
-    @quotes = Quote.all
+    @quotes = Quote.search_by_term(params[:query])
+    # @quotes = Quote.search(quote_params)
     json_response(@quotes)
   end
+
 
   def show
     @quote = Quote.find(params[:id])
@@ -37,7 +39,7 @@ class QuotesController < ApplicationController
   private
 
   def quote_params
-    params.permit(:author, :content, :date, :location)
+    params.permit(:author, :content)
   end
 
 end
