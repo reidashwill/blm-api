@@ -8,7 +8,7 @@
 This API will grow over time to include more that just quotes, but for now it is just a resource for quotes from civil rights activists.
 
 ## Specs
-
+http://localhost:3000/search?query=[searchterm]
 
 
 

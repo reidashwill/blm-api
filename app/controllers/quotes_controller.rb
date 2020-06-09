@@ -1,11 +1,14 @@
 class QuotesController < ApplicationController
 
   def index 
-    @quotes = Quote.search_by_term(params[:query])
-    # @quotes = Quote.search(quote_params)
+    @quotes = Quote.all
     json_response(@quotes)
   end
 
+  def search
+    @quotes = Quote.search_by_term(params[:query])
+    json_response(@quotes)
+  end
 
   def show
     @quote = Quote.find(params[:id])
