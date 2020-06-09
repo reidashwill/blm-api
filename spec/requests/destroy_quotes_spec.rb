@@ -2,15 +2,13 @@ require 'rails_helper'
 require 'jwt'
 
 describe "delete quote route" do
-    # before(:each) {
-    #   curl -H {"'Content-Type: application/json' -X POST -d '{'email':'test@test.com','password':'password'}' http://localhost:3000/authenticate"
-    #   }
-    # }
+   before do
+    @request.env['Authorization'] = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE"
+   end
 
-    
   it 'will delete a quote and return correct message' do
     test_quote = Quote.create!({author: 'test author', content: "test content"})
-    delete "/quotes/#{test_quote.id}"
+    DELETE "/quotes/91"
     expect(response).to have_http_status(200)
     expect(JSON.parse(response.body)['message']).to eq ("You've successfully DESTROYED this quote")
   end
@@ -24,4 +22,19 @@ describe "delete quote route" do
   # end
 end
 
+# DELETE '/quotes/91 HTTP/1.1'
+# Host: localhost:3000
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE
+
 # curl -H "Auth1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE" http://localhost:3000/quotes
+
+# GET /quotes/91 HTTP/1.1
+# Host: localhost:3000
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE
+
+# DELETE /quotes/91 HTTP/1.1
+# Host: localhost:3000
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE
+
+# curl --location --request DELETE 'http://localhost:3000/quotes/91' \
+# --header 'Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE'
