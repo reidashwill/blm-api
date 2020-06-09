@@ -31,6 +31,9 @@ class QuotesController < ApplicationController
 
   def destroy
     @quote = Quote.find(params[:id])
+    # api_key = params[:api_key]
+    # authorized_key = "#{api_key}"
+    # # do we need to create a .env file? is this a proper way to add API_KEY into our 'params'?
     if @quote.destroy 
       render status: 200, json: {
         message: "You've successfully DESTROYED this quote"
