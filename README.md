@@ -7,6 +7,8 @@
 ## Description
 This API will grow over time to include more that just quotes, but for now it is just a resource for quotes from civil rights activists.
 
+This API requires a key, to request a key contact one of the two creators here: 
+
 ## Specs
 http://localhost:3000/search?query=[searchterm]
 
@@ -17,11 +19,11 @@ As a user I would like to be able to see a list of all quotes in the API
 
 As a user I would like to be able to search for quotes either by author or keyword
 
-As an admin I Would like to be able to post new quotes
+As a key holder I Would like to be able to post new quotes
 
-As an admin I would like to be able to edit quotes
+As a key holder I would like to be able to edit quotes
 
-As an admin I would like to be able to delete quotes
+As a kay holder I would like to be able to delete quotes
 
 
 
