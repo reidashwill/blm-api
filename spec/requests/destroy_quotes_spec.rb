@@ -1,14 +1,19 @@
 require 'rails_helper'
-require 'jwt'
+# require 'jwt'
 
 describe "delete quote route" do
-   before do
-    @request.env['Authorization'] = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE"
-   end
+  #  before do
+    
+    # request.headers['Authorization'] = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE"
+  #   admin = User.create!(email: 'admin2@test.com', password: 'password', password_confirmation: 'password')
+  #   exec{
+  #     curl -H "Content-Type: application/json" -X POST -d '{"email":"admin@test.com","password":"password"}' localhost:3000/authenticate
+  #   }
+  #  end
 
   it 'will delete a quote and return correct message' do
     test_quote = Quote.create!({author: 'test author', content: "test content"})
-    DELETE "/quotes/91"
+    delete "/quotes/#{test_quote.id}"
     expect(response).to have_http_status(200)
     expect(JSON.parse(response.body)['message']).to eq ("You've successfully DESTROYED this quote")
   end
