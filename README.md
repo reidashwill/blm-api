@@ -10,6 +10,8 @@ This API will grow over time to include more that just quotes, but for now it is
 This API requires a key, to request a key contact one of the two creators here: https://github.com/reidashwill/black_lives_matter_api/issues
 
 ## Specs
+https://boiling-brook-46170.herokuapp.com/quotes
+
 http://localhost:3000/search?query=[searchterm]
 
 

@@ -13,7 +13,7 @@ describe "delete quote route" do
 
   it 'will delete a quote and return correct message' do
     test_quote = Quote.create!({author: 'test author', content: "test content"})
-    delete "/quotes/#{test_quote.id}"
+    delete "/quotes/#{test_quote.id}", headers:{Authorization: "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE5NzY4NjJ9.8C1v_f-owLZ4b0ty5DoJCKUyanv12Vy6yHhI2qNyuo4"}
     expect(response).to have_http_status(200)
     expect(JSON.parse(response.body)['message']).to eq ("You've successfully DESTROYED this quote")
   end
