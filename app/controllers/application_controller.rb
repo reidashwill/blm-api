@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   include Response
-  before_action :authenticate_request, except: [:index, :show, :search]
+  # before_action :authenticate_request, except: [:index, :show, :search]
   attr_reader :current_user
 
   rescue_from ActiveRecord::RecordNotFound do |exception|
