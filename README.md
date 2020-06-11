@@ -14,6 +14,9 @@ https://boiling-brook-46170.herokuapp.com/quotes
 
 http://localhost:3000/search?query=[searchterm]
 
+There are 4 pages to our API 
+http://localhost:3000/quotes?page=[enter_page_1-4]
+
 
 
 ## User Stories

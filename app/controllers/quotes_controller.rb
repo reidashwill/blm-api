@@ -1,8 +1,10 @@
 class QuotesController < ApplicationController
 
   def index 
-    @quotes = Quote.all
+    @quotes = Quote.all.page params[:page]
+    @page = "#{params[:page]} of 4"
     json_response(@quotes)
+
   end
 
   def search
