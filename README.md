@@ -1,7 +1,6 @@
 # Black Lives Matter Quotes API
 
 
-
 #### By Allison Mackey & Reid Ashwill 
 
 ## Description
@@ -10,14 +9,20 @@ This API will grow over time to include more that just quotes, but for now it is
 This API requires a key, to request a key contact one of the two creators here: https://github.com/reidashwill/black_lives_matter_api/issues
 
 ## Specs
-https://boiling-brook-46170.herokuapp.com/quotes
-
-http://localhost:3000/search?query=[searchterm]
-
-There are 4 pages to our API 
-http://localhost:3000/quotes?page=[enter_page_1-4]
 
 
+| Specs             | Input                                              |
+|-------------------|----------------------------------------------------|
+| GET requests      |                                                    |
+| get all quotes    | http://localhost:3000/quotes?page=[enter_page_1-4] |
+| get one quote     | http://localhost:3000/quotes/[quote_id]            |
+| search for quotes | http://localhost:3000/search?query=[searchterm]    |
+| POST requests     |                                                    |
+| post a quote      | http://localhost:3000/search?query=[searchterm]    |
+| PATCH requests    |                                                    |
+| update a quote    | http://localhost:3000/quotes/[quote_id]            |
+| DELETE requests   |                                                    |
+| delete a request  | http://localhost:3000/quotes/[quote_id]            |
 
 ## User Stories
 As a user I would like to be able to see a list of all quotes in the API
@@ -37,6 +42,8 @@ As a key holder I would like to be able to delete quotes
 * _Navigate to https://github.com/reidashwill/black_lives_matter_quotes_api_
 * _clone the respository to your local machine_
 * _navigate to the cloned directory and open in your text editor of choice to view code_
+
+* _navigate to https://boiling-brook-46170.herokuapp.com/quotes to see the api live
 
 ## Known Bugs
 No known bugs at this time
