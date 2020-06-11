@@ -1,6 +1,7 @@
 {
   "RSpec": {
     "coverage": {
+
       "/Users/reidashwill/Desktop/api_build/spec/requests/destroy_quotes_spec.rb": {
         "lines": [
           1,
@@ -657,5 +658,9 @@
       }
     },
     "timestamp": 1591910926
+
+    },
+    "timestamp": 1591740788
+
   }
 }

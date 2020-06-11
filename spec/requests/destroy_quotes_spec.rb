@@ -1,6 +1,7 @@
 require 'rails_helper'
 # require 'jwt'
 
+
 describe "delete quote route" do
   #  before do
     
@@ -10,6 +11,7 @@ describe "delete quote route" do
   #     curl -H "Content-Type: application/json" -X POST -d '{"email":"admin@test.com","password":"password"}' localhost:3000/authenticate
   #   }
   #  end
+
 
   it 'will delete a quote and return correct message' do
     test_quote = Quote.create!({author: 'test author', content: "test content"})
@@ -27,6 +29,7 @@ describe "delete quote route" do
   # end
 end
 
+
 # DELETE '/quotes/91 HTTP/1.1'
 # Host: localhost:3000
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE
@@ -43,3 +46,4 @@ end
 
 # curl --location --request DELETE 'http://localhost:3000/quotes/91' \
 # --header 'Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1OTE4MTI0MzB9.uNbvTpaQusxb6YdHtBgCuZ9KWolfH4eOtCUuQOo4jaE'
+
